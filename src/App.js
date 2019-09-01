@@ -1,3 +1,9 @@
+/* TODO: 
+        Immediate: Form to manually add task and remove task 
+        Secondary: Sections for Completed and Not Completed
+        Extra: Dark/Light mode onChange, Drag element API
+*/
+
 import React from 'react';
 import TodoItem from './components/TodoItem'
 import todosData from './todosData'
@@ -26,7 +32,12 @@ class App extends React.Component {
     }
 
     render() {
-        const todoComponent = this.state.todos.map(todo => <TodoItem key={todo.id} task={todo} handleChange={this.handleChange} />)
+        const todoComponent = this.state.todos.map(todo => 
+        <TodoItem 
+            key={todo.id} 
+            task={todo} 
+            handleChange={this.handleChange} 
+        />)
         return (
             <div className="todo-list">
                 {todoComponent}

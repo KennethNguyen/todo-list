@@ -1,9 +1,17 @@
+/* Current theme is light-mode unless changed to dark */
+
 body {
+  /* whitesmoke */
   background-color: whitesmoke;
+  /* Dark background 
+  background-color: #121212; */
 }
 
 .todo-list {
+  /* white */
   background-color: white;
+  /* Dark gray todo-list
+  background-color: #343434; */
   margin: auto;
   width: 50%;
   display: flex;
@@ -34,6 +42,7 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 100;
   font-size: 15px;
+  /* #333333 <- Black ; Change to white for dark-mode*/
   color: #333333;
 }
 
