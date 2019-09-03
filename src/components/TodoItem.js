@@ -15,6 +15,7 @@ const TodoItem = props => {
                 onChange={() => props.handleChange(props.task.id)}
             />
             <p style={props.task.completed ? completedStyle : null}>{props.task.text}</p>
+            <button className="deleteButton" onClick={() => props.removeTodo(props.task.id)}>Delete</button>
         </div>
     )
 }

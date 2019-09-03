@@ -1,7 +1,11 @@
 /* TODO: 
-        Immediate: Remove task option for each todo, reset input text box state after a submit  
-        Secondary: Bind enter key to input text/submit section, Sections for Completed and Not Completed
-        Extra: Dark/Light mode onChange, Drag element API
+        Ideas: 
+        -Bind enter key to input text/submit section
+        -Time stamp for form (!remindme) 
+        -Local storage / Cloud storage
+        -Drag element API
+        -Sections for Completed and Not Completed
+        -Dark/Light mode onChange
 */
 
 import React from 'react'
@@ -16,6 +20,7 @@ class App extends React.Component {
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.removeTodo = this.removeTodo.bind(this)
     }
 
     // Updates checkbox state of each task
@@ -40,7 +45,15 @@ class App extends React.Component {
         })
     }
     
-
+    removeTodo(id) {
+        const {todos} = this.state
+        console.log(`Current ID: ${id}`)
+        this.setState({
+            todos: todos.filter((todo) => {
+                return todo.id !== id 
+            })
+        })
+    }
 
     render() {
         const todoComponent = this.state.todos.map(todo => 
@@ -48,6 +61,7 @@ class App extends React.Component {
             key={todo.id} 
             task={todo} 
             handleChange={this.handleChange} 
+            removeTodo={this.removeTodo}
         />)
         return (
             <div className="overall">
