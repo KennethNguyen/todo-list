@@ -1,6 +1,6 @@
 /* TODO: 
-        Immediate: Form to manually add task and remove task 
-        Secondary: Sections for Completed and Not Completed
+        Immediate: Remove task option for each todo, reset input text box state after a submit  
+        Secondary: Bind enter key to input text/submit section, Sections for Completed and Not Completed
         Extra: Dark/Light mode onChange, Drag element API
 */
 
