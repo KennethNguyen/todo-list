@@ -1,17 +1,11 @@
-/* Current theme is light-mode unless changed to dark */
+/* Current theme is dark-mode*/
 
 body {
-  /* whitesmoke */
   background-color: #121212;
-  /* Dark background 
-  background-color: #121212; */
 }
 
 .todo-list {
-  /* white */
   background-color: #343434;
-  /* Dark gray todo-list
-  background-color: #343434; */
   margin: auto;
   width: 50%;
   display: flex;
@@ -42,14 +36,13 @@ body {
   border-bottom: 1px solid #cecece;
   font-family: Roboto, sans-serif;
   font-weight: 100;
-  font-size: 18px;
-  /* #333333 <- Black ; Change to white for dark-mode*/
+  font-size: 20px;
   color: white;
 }
 
 input[type=checkbox] {
   margin-right: 10px;
-  font-size: 30px;
+  transform: scale(1.25);
 }
 
 input[type=checkbox]:focus {
@@ -97,4 +90,14 @@ input[type=button] {
   padding: 16px 32px;
   margin-left: 1px;
   font-size: 16px;
+}
+
+.deleteButton {
+  background-color: maroon;
+  border: none;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px;
+  margin-left: auto;
 }
