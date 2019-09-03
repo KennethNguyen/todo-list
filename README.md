@@ -10,6 +10,12 @@ My first exposure using React and learning about JSX, props, mapping components,
 * Framework: React
 * HTML | Javascript | CSS
 
-##Author
+## Installation
+
+* `git clone https://github.com/KennethNguyen/todo-list`
+* `cd todo-list && npm install`
+* `npm start`
+
+## Author
 
 Kenneth Nguyen
