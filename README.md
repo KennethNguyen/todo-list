@@ -10,6 +10,6 @@ My first exposure using React and learning about JSX, props, mapping components,
 * Framework: React
 * HTML | Javascript | CSS
 
-##Author
+## Author
 
 Kenneth Nguyen
