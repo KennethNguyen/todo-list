@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const TodoItem = props => {
     const completedStyle = {
@@ -12,11 +12,11 @@ const TodoItem = props => {
             <input 
                 type="checkbox" 
                 checked={props.task.completed}
-                onChange={() => props.handleChange(props.task.id)} 
+                onChange={() => props.handleChange(props.task.id)}
             />
             <p style={props.task.completed ? completedStyle : null}>{props.task.text}</p>
         </div>
     )
 }
 
-export default TodoItem;
+export default TodoItem

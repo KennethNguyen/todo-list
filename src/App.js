@@ -4,19 +4,21 @@
         Extra: Dark/Light mode onChange, Drag element API
 */
 
-import React from 'react';
+import React from 'react'
 import TodoItem from './components/TodoItem'
-import todosData from './todosData'
+import TodoForm from './components/TodoForm'
 
 class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            todos: todosData
+            todos: []
         }
-        this.handleChange = this.handleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
+    // Updates checkbox state of each task
     handleChange(id) {
         this.setState(prevState => {
             const updatedTodos = prevState.todos.map(todo => {
@@ -30,6 +32,15 @@ class App extends React.Component {
             }
         })
     }
+    
+    // Adds a new task to todo-list on submit
+    handleSubmit(todo) {
+        this.setState({
+            todos: [...this.state.todos, todo]
+        })
+    }
+    
+
 
     render() {
         const todoComponent = this.state.todos.map(todo => 
@@ -39,11 +50,19 @@ class App extends React.Component {
             handleChange={this.handleChange} 
         />)
         return (
-            <div className="todo-list">
-                {todoComponent}
+            <div className="overall">
+                <div className="todo-list">
+                    <h1>Todo-List</h1>
+                    {todoComponent}
+                </div>
+                <br/>
+                <br />
+                <div className="todo-form">
+                    <TodoForm handleSubmit={this.handleSubmit}/>
+                </div>
             </div>
         )    
     }
 }
 
-export default App;
+export default App
