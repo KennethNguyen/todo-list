@@ -1,5 +1,11 @@
 # Todo-list
 
+Demo: https://kennethnguyen.github.io/todo-list/
+
+## Screenshot (As of September 3, 2019)
+
+![ExampleTodo](/images/exampleTodo.png)
+
 ## Description
 
 A todo-list created using React
